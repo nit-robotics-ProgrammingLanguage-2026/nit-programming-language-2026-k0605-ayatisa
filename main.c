@@ -4,14 +4,24 @@ int main(void)
 {
     int n;
     long total = 0;
-    int i = 1;
-    scanf("%d", &n);
-    if (n < 0)
+    
+    if (scanf("%d", &n) != 1)
     {
-        printf("NG\n"); // 実際には "NG" が出力されている
         return 0;
     }
-    while (1)
+
+    if (n < 0)
     {
-        if (i > n)
-        // (以下略)
+        printf("NG\n");
+    }
+    else
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            total += i; // 実際の計算処理に合わせてここを調整してください
+        }
+        printf("%ld\n", total);
+    }
+
+    return 0;
+}
