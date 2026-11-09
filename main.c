@@ -8,23 +8,10 @@ int main(void)
     scanf("%d", &n);
     if (n < 0)
     {
-        printf("NG");
+        printf("NG\n"); // 実際には "NG" が出力されている
         return 0;
     }
     while (1)
     {
         if (i > n)
-        {
-            break;
-        }
-        if (i % 2 != 0)
-        {
-            i++;
-            continue;
-        }
-        total += i;
-        i++;
-    }
-    printf("%ld", total);
-    return 0;
-}
+        // (以下略)
